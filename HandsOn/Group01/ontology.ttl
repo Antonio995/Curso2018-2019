@@ -8,11 +8,10 @@
 
 @prefix property: <http://www.colegiosMadrid.group01.org/property#>.
 @prefix class: <http://www.colegiosMadrid.group01.org/class#>.
-@prefix individual: <http://www.colegiosMadrid.group01.org/individual#>.
 
 #Object properties
 property:isInCity rdf:type rdf:Property;
-		rdfs:domain class:Station;
+		rdfs:domain class:School;
 		rdfs:range class:City.
 		
 #Data properties
@@ -103,4 +102,5 @@ property:type rdf:type rdf:Property;
 #Classes
 class:School rdf:type rdfs:Class.
 
-class:City rdf:type rdfs:Class.
+class:City rdf:type rdfs:Class;
+	rdfs:SubClassOf :School.
